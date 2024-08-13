@@ -6,7 +6,12 @@ export async function getPosts() {
         title,
         slug,
         publishedAt,
-        excerpt
+        excerpt,
+        tags[]-> {
+            _id,
+            slug,
+            name
+        }
       }
     `;
 

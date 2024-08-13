@@ -21,6 +21,17 @@ const PostComponent = ({ post }: Props) => {
         </p>
         <p className="text-gray-400 mb-4 line-clamp-2">{post.excerpt}</p>
       </Link>
+
+      <div>
+        {post.tags.map((tag) => (
+          <span
+            key={tag._id}
+            className="mr-2 p-1 rounded-sm text-sm lowercase bg-gray-950 border border-gray-900"
+          >
+            #{tag.name}
+          </span>
+        ))}
+      </div>
     </div>
   );
 };
