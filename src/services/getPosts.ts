@@ -7,6 +7,7 @@ export async function getPosts() {
         slug,
         publishedAt,
         excerpt,
+        _id,
         tags[]-> {
             _id,
             slug,
