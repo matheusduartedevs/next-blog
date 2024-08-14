@@ -5,7 +5,8 @@ export async function getAllTags() {
         *[_type == "tag"] {
             name,
             slug,
-            _id
+            _id,
+            "postCount": count(*[_type == "post" && references("tags", ^._id)])
         }
     `;
 

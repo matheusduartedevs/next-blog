@@ -15,7 +15,7 @@ const TagsPage = async () => {
           tags.map((tag) => (
             <Link key={tag._id} href={`/tag/${tag.slug.current}`}>
               <div className="mb-2 p-2 text-sm lowercase bg-gray-950 border border-gray-900 text-purple-500">
-                #{tag.name}
+                #{tag.name} ({tag.postCount})
               </div>
             </Link>
           ))}
