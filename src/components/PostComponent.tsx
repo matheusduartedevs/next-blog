@@ -1,5 +1,5 @@
 import { Post } from "@/interfaces/Post";
-import { Lilita_One } from "next/font/google";
+import { Lilita_One, VT323 } from "next/font/google";
 import Link from "next/link";
 
 type Props = {
@@ -7,7 +7,7 @@ type Props = {
 };
 
 const font = Lilita_One({ weight: "400", subsets: ["latin"] });
-const dateFont = Lilita_One({ weight: "400", subsets: ["latin"] });
+const dateFont = VT323({ weight: "400", subsets: ["latin"] });
 
 const PostComponent = ({ post }: Props) => {
   return (
