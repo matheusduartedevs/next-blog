@@ -6,6 +6,7 @@ import { PortableText } from "next-sanity";
 import { VT323 } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 interface PostPageProps {
   params: {
@@ -17,6 +18,10 @@ const dateFont = VT323({ weight: "400", subsets: ["latin"] });
 
 const PostPage = async ({ params }: PostPageProps) => {
   const post: Post = await getPost(params.slug);
+
+  if (!post) {
+    notFound();
+  }
 
   return (
     <div>
